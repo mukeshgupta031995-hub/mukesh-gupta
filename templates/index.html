@@ -1,0 +1,882 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- ================================================================= -->
+<!-- SECTION 1: HERO & INTRODUCTORY PROFILE                            -->
+<!-- ================================================================= -->
+<section class="section hero-section" id="about" aria-labelledby="hero-name">
+  <div class="container">
+    <!-- Top Metadata Track -->
+    <div class="metadata-track">
+      <div class="badge badge-primary-tint">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>12+ Years Industry Track Record</span>
+      </div>
+      <div class="badge badge-surface">
+        <span class="material-symbols-outlined icon-sm text-secondary" aria-hidden="true">verified</span>
+        <span>Reliance Retail &bull; Flipkart Instakart &bull; Maharashtra Feeds</span>
+      </div>
+    </div>
+
+    <!-- Main Hero Split Grid -->
+    <div class="hero-grid">
+      <!-- Left Column: Executive Summary & Bio -->
+      <div class="hero-bio-col">
+        <div class="section-tag">
+          <span class="tag-line" aria-hidden="true"></span>
+          <span>Retail Operations & Large-Format Store Leader</span>
+        </div>
+
+        <h1 class="hero-title" id="hero-name">Mukesh Gupta</h1>
+        <p class="hero-subtitle">
+          Assistant Manager | Retail Operations | Warehouse | Inventory | Finance & Commercial Operations
+        </p>
+
+        <!-- Contact Pills Bar -->
+        <div class="contact-pills-wrap" role="list">
+          <span class="contact-pill" role="listitem">
+            <span class="material-symbols-outlined text-secondary icon-sm" aria-hidden="true">location_on</span>
+            <span>Azamgarh, UP (Current: Ahmedabad, Gujarat)</span>
+          </span>
+          <a href="tel:+917016498175" class="contact-pill link-pill" role="listitem" aria-label="Call Mukesh Gupta">
+            <span class="material-symbols-outlined text-secondary icon-sm" aria-hidden="true">phone</span>
+            <span>+91 7016498175</span>
+          </a>
+          <a href="mailto:mgsmukeshgupta@gmail.com" class="contact-pill link-pill" role="listitem" aria-label="Email Mukesh Gupta">
+            <span class="material-symbols-outlined text-secondary icon-sm" aria-hidden="true">mail</span>
+            <span>mgsmukeshgupta@gmail.com</span>
+          </a>
+          <span class="contact-pill" role="listitem">
+            <span class="material-symbols-outlined text-secondary icon-sm" aria-hidden="true">cake</span>
+            <span>DOB: 2 March 1995 | Married</span>
+          </span>
+        </div>
+
+        <!-- Verbatim Bio Callout -->
+        <div class="executive-bio-card">
+          <p class="bio-paragraph">
+            Results-driven Retail Operations Professional with <strong>12+ years of experience</strong> across retail operations, warehouse management, inventory control, finance, supply chain, and commercial activities. Currently working as an <strong>Assistant Manager at Reliance Retail Limited</strong>, managing a <strong>17,442 sq. ft.</strong> retail store with an average monthly business of upto <strong>₹3 Crore</strong>.
+          </p>
+        </div>
+
+        <!-- Primary Call to Action Buttons -->
+        <div class="hero-cta-group">
+          <a href="tel:+917016498175" class="btn btn-dark-solid btn-md" aria-label="Direct Phone Call">
+            <span class="material-symbols-outlined">phone_in_talk</span>
+            <span>Call +91 7016498175</span>
+          </a>
+          <a href="mailto:mgsmukeshgupta@gmail.com" class="btn btn-primary-solid btn-md" aria-label="Send Direct Email">
+            <span class="material-symbols-outlined">mail</span>
+            <span>Email Direct</span>
+          </a>
+          <button type="button" class="btn btn-surface-solid btn-md" id="heroCvBtn" aria-label="Download Executive Dossier">
+            <span class="material-symbols-outlined">download</span>
+            <span>Download Resume PDF</span>
+          </button>
+          <a href="#experience" class="btn btn-ghost-link btn-md">
+            <span>View Experience</span>
+            <span class="material-symbols-outlined">arrow_downward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Profile Card Frame -->
+      <div class="hero-profile-col">
+        <div class="profile-card">
+          <div class="profile-card-stripe" aria-hidden="true"></div>
+          
+          <div class="avatar-frame">
+            <img 
+              src="{{ url_for('static', filename='images/mukesh-gupta.jpg') }}" 
+              alt="Mukesh Gupta - Assistant Manager Retail Operations" 
+              class="avatar-img"
+              loading="eager"
+            >
+            <span class="avatar-online-badge" title="Active in Leadership Mandates" aria-hidden="true">
+              <span class="pulse-inner"></span>
+            </span>
+          </div>
+
+          <div class="profile-meta text-center">
+            <div class="profile-meta-name">Mukesh Gupta</div>
+            <div class="profile-meta-role">Store Management & Retail Operations Leader</div>
+          </div>
+
+          <!-- Verified Badges Stack -->
+          <div class="profile-badges-stack">
+            <div class="profile-badge-item">
+              <span class="material-symbols-outlined text-secondary" aria-hidden="true">store</span>
+              <span>Currently: Assistant Manager – Reliance Retail Limited</span>
+            </div>
+            <div class="profile-badge-item">
+              <span class="material-symbols-outlined text-secondary" aria-hidden="true">business_center</span>
+              <span>Open to Store Manager / Operations Leadership Roles</span>
+            </div>
+            <div class="profile-badge-item">
+              <span class="material-symbols-outlined text-secondary" aria-hidden="true">near_me</span>
+              <span>Location: Ahmedabad / Relocation Open Pan-India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 2: CAREER OBJECTIVE CALLOUT BANNER                        -->
+<!-- ================================================================= -->
+<section class="section py-none" aria-label="Career Objective">
+  <div class="container">
+    <div class="callout-banner">
+      <div class="banner-content">
+        <div class="banner-tag">
+          <span class="material-symbols-outlined icon-md" aria-hidden="true">flag</span>
+          <span>Career Objective</span>
+        </div>
+        <blockquote class="banner-quote">
+          “To pursue a Store Manager / Retail Operations leadership position where I can utilize my extensive experience in retail operations, sales, inventory management, team leadership, customer service, warehouse management, and commercial activities to drive business growth, improve operational efficiency, and deliver an excellent customer experience.”
+        </blockquote>
+      </div>
+      <div class="banner-action">
+        <a href="#contact" class="btn btn-primary-solid btn-lg">
+          <span>Connect for Leadership Mandates</span>
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 3: KEY OPERATIONAL METRICS & HIGHLIGHTS                   -->
+<!-- ================================================================= -->
+<section class="section" id="highlights" aria-labelledby="metrics-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Executive Performance Metrics</span>
+      <h2 class="section-title" id="metrics-heading">Store Leadership & Operational Scale</h2>
+      <p class="section-subtitle">Proven numerical performance in large-format hypermarket environments, multi-unit warehouse governance, and commercial P&L oversight.</p>
+    </div>
+
+    <div class="metrics-grid">
+      <!-- Metric 1: Tenure -->
+      <article class="metric-card">
+        <div class="metric-card-top">
+          <span class="metric-category">Commercial Tenure</span>
+          <span class="material-symbols-outlined metric-icon" aria-hidden="true">history</span>
+        </div>
+        <div class="metric-card-body">
+          <div class="metric-value">12+ <span class="metric-unit">Years</span></div>
+          <h3 class="metric-label">Cross-Functional Experience</h3>
+          <p class="metric-desc">Across retail operations, warehouse management, inventory control, and enterprise finance.</p>
+        </div>
+        <div class="metric-card-bottom">
+          <span class="metric-badge">Reliance Retail &bull; Flipkart &bull; Maharashtra Feeds</span>
+        </div>
+      </article>
+
+      <!-- Metric 2: Monthly Sales -->
+      <article class="metric-card">
+        <div class="metric-card-top">
+          <span class="metric-category">Monthly Sales Turnover</span>
+          <span class="material-symbols-outlined metric-icon" aria-hidden="true">currency_rupee</span>
+        </div>
+        <div class="metric-card-body">
+          <div class="metric-value">₹3 Crore</div>
+          <h3 class="metric-label">Average Monthly Sales</h3>
+          <p class="metric-desc">Commercial targets, footfall conversion, promotional events, and top-line store profitability.</p>
+        </div>
+        <div class="metric-card-bottom">
+          <span class="metric-badge">
+            <span class="material-symbols-outlined icon-sm">trending_up</span> Consistent Monthly Target Delivery
+          </span>
+        </div>
+      </article>
+
+      <!-- Metric 3: Footprint Scale -->
+      <article class="metric-card">
+        <div class="metric-card-top">
+          <span class="metric-category">Footprint Scale</span>
+          <span class="material-symbols-outlined metric-icon" aria-hidden="true">aspect_ratio</span>
+        </div>
+        <div class="metric-card-body">
+          <div class="metric-value">17,442 <span class="metric-unit">Sq. Ft.</span></div>
+          <h3 class="metric-label">Store & Warehouse Floor</h3>
+          <p class="metric-desc">Total retail sales area, backroom staging, loading bays, and multi-aisle customer shopping floors.</p>
+        </div>
+        <div class="metric-card-bottom">
+          <span class="metric-badge">
+            <span class="material-symbols-outlined icon-sm">domain</span> Ahmedabad Flagship Command
+          </span>
+        </div>
+      </article>
+
+      <!-- Metric 4: Average Bill Value -->
+      <article class="metric-card">
+        <div class="metric-card-top">
+          <span class="metric-category">Customer Transaction</span>
+          <span class="material-symbols-outlined metric-icon" aria-hidden="true">receipt_long</span>
+        </div>
+        <div class="metric-card-body">
+          <div class="metric-value">₹900 – ₹950</div>
+          <h3 class="metric-label">Average Bill Value (ABV)</h3>
+          <p class="metric-desc">Sustained customer spend through strategic cross-merchandising, checkout upselling, and bundle offers.</p>
+        </div>
+        <div class="metric-card-bottom">
+          <span class="metric-badge">
+            <span class="material-symbols-outlined icon-sm">add_shopping_cart</span> Targeted Basket Optimization
+          </span>
+        </div>
+      </article>
+
+      <!-- Metric 5: Average Basket Size -->
+      <article class="metric-card">
+        <div class="metric-card-top">
+          <span class="metric-category">Merchandise Velocity</span>
+          <span class="material-symbols-outlined metric-icon" aria-hidden="true">shopping_basket</span>
+        </div>
+        <div class="metric-card-body">
+          <div class="metric-value">6.24</div>
+          <h3 class="metric-label">Average Basket Size (ABS)</h3>
+          <p class="metric-desc">Units per transaction sustained through high stock availability and floor visual merchandising standards.</p>
+        </div>
+        <div class="metric-card-bottom">
+          <span class="metric-badge">
+            <span class="material-symbols-outlined icon-sm">bar_chart</span> High-Velocity Product Mix
+          </span>
+        </div>
+      </article>
+
+      <!-- Metric 6: SOP & Governance -->
+      <article class="metric-card">
+        <div class="metric-card-top">
+          <span class="metric-category">Governance & Audit</span>
+          <span class="material-symbols-outlined metric-icon" aria-hidden="true">rule</span>
+        </div>
+        <div class="metric-card-body">
+          <div class="metric-value">Audited</div>
+          <h3 class="metric-label">SOP & Process Compliance</h3>
+          <p class="metric-desc">Hands-on experience with SAP, ERP, Excel, MIS, and Process/ICOFR internal & statutory audit processes.</p>
+        </div>
+        <div class="metric-card-bottom">
+          <span class="metric-badge">
+            <span class="material-symbols-outlined icon-sm">verified_user</span> Zero-Defect Audit Rigor
+          </span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 4: PROFESSIONAL EXPERIENCE TIMELINE                       -->
+<!-- ================================================================= -->
+<section class="section" id="experience" aria-labelledby="experience-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Employment History</span>
+      <h2 class="section-title" id="experience-heading">Professional Experience</h2>
+      <p class="section-subtitle">A comprehensive chronological timeline of store management, finance, supply chain, and operations leadership.</p>
+    </div>
+
+    <!-- Timeline Wrapper with Connected Rail -->
+    <div class="timeline-container">
+      <div class="timeline-rail" aria-hidden="true"></div>
+
+      <!-- Experience Item 1: Reliance Retail Limited -->
+      <div class="timeline-item">
+        <div class="timeline-marker" aria-hidden="true">
+          <span class="material-symbols-outlined">storefront</span>
+        </div>
+        <article class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <span class="badge badge-accent mb-1">Current Position</span>
+              <h3 class="job-title">Assistant Manager</h3>
+              <div class="company-name">Reliance Retail Limited</div>
+            </div>
+            <div class="timeline-period-block">
+              <div class="timeline-dates">
+                <span class="material-symbols-outlined icon-sm text-secondary" aria-hidden="true">calendar_today</span>
+                <span>September 2021 – Present</span>
+              </div>
+              <div class="timeline-location">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">location_on</span>
+                <span>Ahmedabad, Gujarat</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Store Profile KPI Strip -->
+          <div class="store-kpi-strip">
+            <div class="store-kpi-item">
+              <span class="store-kpi-lbl">Store Area</span>
+              <span class="store-kpi-val">17,442 Sq. Ft.</span>
+            </div>
+            <div class="store-kpi-item">
+              <span class="store-kpi-lbl">Avg Monthly Sales</span>
+              <span class="store-kpi-val">₹3 Crore</span>
+            </div>
+            <div class="store-kpi-item">
+              <span class="store-kpi-lbl">Avg Bill Value (ABV)</span>
+              <span class="store-kpi-val">₹900 – ₹950</span>
+            </div>
+            <div class="store-kpi-item">
+              <span class="store-kpi-lbl">Avg Basket Size (ABS)</span>
+              <span class="store-kpi-val">6.24</span>
+            </div>
+          </div>
+
+          <!-- Key Responsibilities -->
+          <div class="responsibilities-block">
+            <h4 class="resp-heading">Key Responsibilities:</h4>
+            <ul class="resp-grid">
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Manage complete store and warehouse operations.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Drive achievement of sales targets, operational KPIs and business objectives.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Ensure high standards of customer service and customer satisfaction.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Monitor commercial activities and support store profitability.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Manage inventory, stock accuracy, replenishment and stock availability.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Lead inbound and outbound warehouse operations.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Conduct stock audits and inventory reconciliation.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Monitor and control shrinkage, losses and operational discrepancies.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Prepare and analyze Daily, Weekly and Monthly MIS reports.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Manage manpower planning and monitor operational expenses.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Train, guide and motivate team members to improve productivity.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Ensure compliance with company SOPs, policies and operational standards.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Coordinate with cross-functional teams for smooth business operations.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Handle customer concerns and ensure timely resolution.</span></li>
+              <li class="col-span-full"><span class="material-symbols-outlined check-icon">check_circle</span><span>Support continuous improvement initiatives across store operations.</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <!-- Experience Item 2: Instakart Services (Flipkart) -->
+      <div class="timeline-item">
+        <div class="timeline-marker marker-primary" aria-hidden="true">
+          <span class="material-symbols-outlined">local_shipping</span>
+        </div>
+        <article class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3 class="job-title">Finance Associate II</h3>
+              <div class="company-name">Instakart Services Pvt. Ltd. (Flipkart)</div>
+            </div>
+            <div class="timeline-period-block">
+              <div class="timeline-dates">
+                <span class="material-symbols-outlined icon-sm text-secondary" aria-hidden="true">calendar_today</span>
+                <span>August 2018 – September 2021</span>
+              </div>
+              <div class="timeline-location">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">account_tree</span>
+                <span>Supply Chain & Logistics Finance</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsibilities-block">
+            <h4 class="resp-heading">Key Responsibilities:</h4>
+            <ul class="resp-grid">
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Managed month-end financial closing activities.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Performed account reconciliation and financial reporting.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Supported Internal, Statutory, SOX and ICOFR audits.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Managed COD reconciliation and payment collection activities.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Handled invoice processing and accounting activities.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Performed revenue verification and compliance checks.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Prepared MIS reports and supported financial analysis.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Coordinated with business teams for process improvements.</span></li>
+              <li class="col-span-full"><span class="material-symbols-outlined check-icon">check_circle</span><span>Ensured accuracy and timely completion of finance-related activities.</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <!-- Experience Item 3: Maharashtra Feeds Pvt. Ltd. -->
+      <div class="timeline-item">
+        <div class="timeline-marker marker-slate" aria-hidden="true">
+          <span class="material-symbols-outlined">account_balance_wallet</span>
+        </div>
+        <article class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3 class="job-title">Accounts Assistant</h3>
+              <div class="company-name">Maharashtra Feeds Pvt. Ltd.</div>
+            </div>
+            <div class="timeline-period-block">
+              <div class="timeline-dates">
+                <span class="material-symbols-outlined icon-sm text-secondary" aria-hidden="true">calendar_today</span>
+                <span>October 2013 – August 2018</span>
+              </div>
+              <div class="timeline-location">
+                <span class="material-symbols-outlined icon-sm" aria-hidden="true">business</span>
+                <span>Commercial & Financial Operations</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsibilities-block">
+            <h4 class="resp-heading">Key Responsibilities:</h4>
+            <ul class="resp-grid">
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Managed Accounts Payable and Accounts Receivable activities.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Handled sales and journal voucher entries.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Performed party and account reconciliation.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Supported stock audits and inventory verification.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Managed cash flow-related activities.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Prepared MIS reports.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Maintained inventory and accounting records.</span></li>
+              <li><span class="material-symbols-outlined check-icon">check_circle</span><span>Coordinated transportation and logistics activities.</span></li>
+              <li class="col-span-full"><span class="material-symbols-outlined check-icon">check_circle</span><span>Supported day-to-day commercial and administrative operations.</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 5: KEY ACHIEVEMENTS                                       -->
+<!-- ================================================================= -->
+<section class="section bg-surface-alt" id="achievements" aria-labelledby="achievements-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Track Record</span>
+      <h2 class="section-title" id="achievements-heading">Key Achievements</h2>
+      <p class="section-subtitle">Demonstrated leadership impact across retail store command, warehouse logistics, and team performance.</p>
+    </div>
+
+    <div class="achievements-grid">
+      <!-- Achievement 1 -->
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">
+          <span class="material-symbols-outlined">store</span>
+        </div>
+        <h3 class="achievement-title">Retail Store Management</h3>
+        <p class="achievement-desc">Successfully managing a 17,442 sq. ft. Reliance Retail Store while handling approximately ₹3 Crore average monthly business.</p>
+      </div>
+
+      <!-- Achievement 2 -->
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">
+          <span class="material-symbols-outlined">insights</span>
+        </div>
+        <h3 class="achievement-title">Business & KPI Management</h3>
+        <p class="achievement-desc">Driving store operations with a strong focus on sales targets, operational KPIs, customer experience and profitability.</p>
+      </div>
+
+      <!-- Achievement 3 -->
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">
+          <span class="material-symbols-outlined">fact_check</span>
+        </div>
+        <h3 class="achievement-title">Inventory Control</h3>
+        <p class="achievement-desc">Maintaining inventory accuracy through regular stock audits, reconciliation and effective inventory control processes.</p>
+      </div>
+
+      <!-- Achievement 4 -->
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">
+          <span class="material-symbols-outlined">warehouse</span>
+        </div>
+        <h3 class="achievement-title">Warehouse Operations</h3>
+        <p class="achievement-desc">Managing inbound and outbound warehouse activities while maintaining operational efficiency and stock availability.</p>
+      </div>
+
+      <!-- Achievement 5 -->
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">
+          <span class="material-symbols-outlined">groups</span>
+        </div>
+        <h3 class="achievement-title">Team Development</h3>
+        <p class="achievement-desc">Training and developing store teams to improve productivity, service standards and operational performance.</p>
+      </div>
+
+      <!-- Achievement 6 -->
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">
+          <span class="material-symbols-outlined">verified</span>
+        </div>
+        <h3 class="achievement-title">Operational Excellence</h3>
+        <p class="achievement-desc">Supporting commercial, finance and store operations while ensuring compliance with established SOPs and company policies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 6: CORE COMPETENCIES & TECHNICAL SKILLS MATRIX           -->
+<!-- ================================================================= -->
+<section class="section" id="competencies" aria-labelledby="skills-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Capabilities</span>
+      <h2 class="section-title" id="skills-heading">Core Competencies & Technical Skills Matrix</h2>
+      <p class="section-subtitle">Structured categorization of operational expertise, financial acumen, and enterprise systems proficiency.</p>
+    </div>
+
+    <!-- Interactive Filter Pills -->
+    <div class="filter-pills-bar" role="tablist" aria-label="Skill Categories">
+      <button type="button" class="filter-pill active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+      <button type="button" class="filter-pill" data-filter="retail" role="tab" aria-selected="false">Retail & Store Operations</button>
+      <button type="button" class="filter-pill" data-filter="warehouse" role="tab" aria-selected="false">Inventory & Warehouse</button>
+      <button type="button" class="filter-pill" data-filter="finance" role="tab" aria-selected="false">Finance & Commercial</button>
+      <button type="button" class="filter-pill" data-filter="team" role="tab" aria-selected="false">Team Leadership</button>
+      <button type="button" class="filter-pill" data-filter="systems" role="tab" aria-selected="false">Enterprise Systems</button>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Category 1: Retail & Store Operations -->
+      <div class="skill-category-card" data-category="retail">
+        <div class="category-header">
+          <span class="material-symbols-outlined category-icon">storefront</span>
+          <h3 class="category-title">Retail & Store Operations</h3>
+        </div>
+        <div class="chips-wrap">
+          <span class="skill-chip">Store Operations Management</span>
+          <span class="skill-chip">Retail Sales Management</span>
+          <span class="skill-chip">Sales Target Achievement</span>
+          <span class="skill-chip">KPI Management</span>
+          <span class="skill-chip">Customer Service & NPS</span>
+          <span class="skill-chip">Commercial Operations</span>
+          <span class="skill-chip">Profitability & P&L Control</span>
+          <span class="skill-chip">Manpower Planning</span>
+          <span class="skill-chip">Visual Merchandising</span>
+        </div>
+      </div>
+
+      <!-- Category 2: Inventory & Warehouse -->
+      <div class="skill-category-card" data-category="warehouse">
+        <div class="category-header">
+          <span class="material-symbols-outlined category-icon">inventory_2</span>
+          <h3 class="category-title">Inventory & Warehouse</h3>
+        </div>
+        <div class="chips-wrap">
+          <span class="skill-chip">Inventory Management</span>
+          <span class="skill-chip">Stock Control</span>
+          <span class="skill-chip">Stock Reconciliation</span>
+          <span class="skill-chip">Warehouse Operations</span>
+          <span class="skill-chip">Inbound & Outbound Operations</span>
+          <span class="skill-chip">Inventory Accuracy (99.8%)</span>
+          <span class="skill-chip">Shrinkage Control</span>
+          <span class="skill-chip">Loss Prevention</span>
+          <span class="skill-chip">Stock Auditing & FIFO</span>
+        </div>
+      </div>
+
+      <!-- Category 3: Finance & Commercial -->
+      <div class="skill-category-card" data-category="finance">
+        <div class="category-header">
+          <span class="material-symbols-outlined category-icon">payments</span>
+          <h3 class="category-title">Finance & Commercial</h3>
+        </div>
+        <div class="chips-wrap">
+          <span class="skill-chip">Accounts Payable & Receivable</span>
+          <span class="skill-chip">Cash Flow Management</span>
+          <span class="skill-chip">COD Reconciliation</span>
+          <span class="skill-chip">Invoice Processing</span>
+          <span class="skill-chip">Revenue Verification</span>
+          <span class="skill-chip">Financial Reconciliation</span>
+          <span class="skill-chip">Internal & Statutory Audit</span>
+          <span class="skill-chip">SOX / ICOFR Compliance</span>
+          <span class="skill-chip">MIS Reporting</span>
+        </div>
+      </div>
+
+      <!-- Category 4: Team Management -->
+      <div class="skill-category-card" data-category="team">
+        <div class="category-header">
+          <span class="material-symbols-outlined category-icon">supervisor_account</span>
+          <h3 class="category-title">Team Management</h3>
+        </div>
+        <div class="chips-wrap">
+          <span class="skill-chip">Team Leadership</span>
+          <span class="skill-chip">Staff Training & Coaching</span>
+          <span class="skill-chip">Performance Management</span>
+          <span class="skill-chip">Team Motivation</span>
+          <span class="skill-chip">Cross-Functional Coordination</span>
+          <span class="skill-chip">Roster Planning</span>
+          <span class="skill-chip">Operational Problem Solving</span>
+        </div>
+      </div>
+
+      <!-- Category 5: Technical Skills & Enterprise Systems (Spans 2 cols on desktop) -->
+      <div class="skill-category-card col-span-2" data-category="systems">
+        <div class="category-header">
+          <span class="material-symbols-outlined category-icon">terminal</span>
+          <h3 class="category-title">Technical Skills & Enterprise Systems</h3>
+        </div>
+        <div class="systems-grid">
+          <div class="system-item">
+            <span class="material-symbols-outlined text-secondary">database</span>
+            <span class="system-name">SAP (Retail & MM)</span>
+          </div>
+          <div class="system-item">
+            <span class="material-symbols-outlined text-secondary">settings_system_daydream</span>
+            <span class="system-name">ERP Systems</span>
+          </div>
+          <div class="system-item">
+            <span class="material-symbols-outlined text-secondary">table_chart</span>
+            <span class="system-name">Microsoft Excel (Adv)</span>
+          </div>
+          <div class="system-item">
+            <span class="material-symbols-outlined text-secondary">description</span>
+            <span class="system-name">Microsoft Word</span>
+          </div>
+          <div class="system-item">
+            <span class="material-symbols-outlined text-secondary">slideshow</span>
+            <span class="system-name">Microsoft PowerPoint</span>
+          </div>
+          <div class="system-item">
+            <span class="material-symbols-outlined text-secondary">monitoring</span>
+            <span class="system-name">MIS Reporting</span>
+          </div>
+          <div class="system-item">
+            <span class="material-symbols-outlined text-secondary">inventory</span>
+            <span class="system-name">Inventory Systems</span>
+          </div>
+          <div class="system-item">
+            <span class="material-symbols-outlined text-secondary">analytics</span>
+            <span class="system-name">Financial Reporting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 7: CAREER VALUE STATEMENT                                 -->
+<!-- ================================================================= -->
+<section class="section py-none" aria-label="Executive Value Statement">
+  <div class="container">
+    <div class="value-proposition-card">
+      <span class="material-symbols-outlined quote-watermark" aria-hidden="true">format_quote</span>
+      <div class="value-content">
+        <span class="section-badge mb-1">Executive Value Proposition</span>
+        <blockquote class="value-quote">
+          “With more than 12 years of cross-functional experience, I bring a combination of retail operations expertise, financial understanding, warehouse knowledge, inventory control, team leadership and commercial acumen. My experience across Reliance Retail, Flipkart’s Instakart operations and Maharashtra Feeds has helped me develop a strong understanding of both front-end retail operations and back-end business processes. I am particularly focused on achieving business targets, improving operational efficiency, maintaining inventory accuracy, developing teams and delivering a strong customer experience.”
+        </blockquote>
+        <div class="quote-author">
+          — Mukesh Gupta, Retail Operations Executive
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 8: EDUCATIONAL QUALIFICATIONS & PERSONAL DETAILS          -->
+<!-- ================================================================= -->
+<section class="section" id="education" aria-labelledby="education-heading">
+  <div class="container">
+    <div class="education-grid">
+      <!-- Left Column: Academic Record -->
+      <div class="education-col">
+        <div class="section-header text-left">
+          <span class="section-badge">Academic Record</span>
+          <h2 class="section-title" id="education-heading">Educational Qualifications</h2>
+        </div>
+
+        <div class="education-cards-stack">
+          <!-- Degree 1 -->
+          <article class="degree-card">
+            <div class="degree-info">
+              <span class="material-symbols-outlined degree-icon" aria-hidden="true">school</span>
+              <div>
+                <h3 class="degree-title">Master of Arts (M.A.)</h3>
+                <p class="degree-institution">Purvanchal University</p>
+              </div>
+            </div>
+            <div class="degree-score">
+              <span class="score-pill">58.20%</span>
+            </div>
+          </article>
+
+          <!-- Degree 2 -->
+          <article class="degree-card">
+            <div class="degree-info">
+              <span class="material-symbols-outlined degree-icon" aria-hidden="true">school</span>
+              <div>
+                <h3 class="degree-title">Bachelor of Arts (B.A.)</h3>
+                <p class="degree-institution">Dr. Ram Manohar Lohia Avadh University</p>
+              </div>
+            </div>
+            <div class="degree-score">
+              <span class="score-pill">57.61%</span>
+            </div>
+          </article>
+
+          <!-- Degree 3 -->
+          <article class="degree-card">
+            <div class="degree-info">
+              <span class="material-symbols-outlined degree-icon" aria-hidden="true">history_edu</span>
+              <div>
+                <h3 class="degree-title">Intermediate (12th)</h3>
+                <p class="degree-institution">UP Board</p>
+              </div>
+            </div>
+            <div class="degree-score">
+              <span class="score-pill score-pill-high">68.70%</span>
+            </div>
+          </article>
+
+          <!-- Degree 4 -->
+          <article class="degree-card">
+            <div class="degree-info">
+              <span class="material-symbols-outlined degree-icon" aria-hidden="true">history_edu</span>
+              <div>
+                <h3 class="degree-title">High School (10th)</h3>
+                <p class="degree-institution">UP Board</p>
+              </div>
+            </div>
+            <div class="degree-score">
+              <span class="score-pill">54.00%</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Right Column: Personal Dossier -->
+      <div class="dossier-col">
+        <div class="section-header text-left">
+          <span class="section-badge">Background Record</span>
+          <h2 class="section-title">Personal Details</h2>
+        </div>
+
+        <div class="dossier-card">
+          <dl class="dossier-list">
+            <div class="dossier-row">
+              <dt>Full Name</dt>
+              <dd>Mukesh Gupta</dd>
+            </div>
+            <div class="dossier-row">
+              <dt>Father’s Name</dt>
+              <dd>Mr. Harishankar Gupta</dd>
+            </div>
+            <div class="dossier-row">
+              <dt>Date of Birth</dt>
+              <dd>2 March 1995</dd>
+            </div>
+            <div class="dossier-row">
+              <dt>Gender & Marital Status</dt>
+              <dd>Male | Married</dd>
+            </div>
+            <div class="dossier-row">
+              <dt>Current Workplace</dt>
+              <dd>Ahmedabad, Gujarat</dd>
+            </div>
+            <div class="dossier-row address-row">
+              <dt>Permanent Address</dt>
+              <dd class="address-box">
+                House No. 45, Village Nebuadih, District Azamgarh, Uttar Pradesh – 276142
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SECTION 9: CONTACT & LEADERSHIP INQUIRY                           -->
+<!-- ================================================================= -->
+<section class="section" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-card-wrapper">
+      <div class="contact-header-banner">
+        <div class="banner-badge">
+          <span class="pulse-dot"></span>
+          <span>Direct Leadership Inquiry</span>
+        </div>
+        <h2 class="contact-heading" id="contact-heading">
+          Ready to discuss leadership roles in Store Management, Hypermarket Operations, or Regional Logistics?
+        </h2>
+        <p class="contact-subheading">
+          Direct Call: +91 7016498175 &bull; Email: mgsmukeshgupta@gmail.com &bull; Ahmedabad, GJ / Azamgarh, UP
+        </p>
+
+        <div class="quick-contact-pills">
+          <a href="tel:+917016498175" class="btn btn-secondary-solid btn-md">
+            <span class="material-symbols-outlined">call</span>
+            <span>Call +91 7016498175</span>
+          </a>
+          <a href="mailto:mgsmukeshgupta@gmail.com" class="btn btn-dark-solid btn-md">
+            <span class="material-symbols-outlined">mail</span>
+            <span>Send Direct Email</span>
+          </a>
+          <a href="{{ url_for('resume') }}" target="_blank" rel="noopener" class="btn btn-surface-solid btn-md">
+            <span class="material-symbols-outlined">description</span>
+            <span>View Printable CV</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Functional Interactive Contact Form -->
+      <div class="inquiry-form-container">
+        <h3 class="form-title">Send a Leadership Mandate or Inquiry</h3>
+        <p class="form-desc">Fill in your requirements below. The inquiry will be recorded and a confirmation will be displayed immediately.</p>
+
+        <form id="leadershipContactForm" class="inquiry-form" novalidate>
+          <div class="form-row form-row-2">
+            <div class="form-group" id="group-name">
+              <label for="contactName" class="form-label">Your Name / Title <span class="required">*</span></label>
+              <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g., Rajesh Sharma (VP HR)" required>
+              <span class="form-error-msg" id="error-name"></span>
+            </div>
+
+            <div class="form-group" id="group-organization">
+              <label for="contactOrg" class="form-label">Company / Organization</label>
+              <input type="text" id="contactOrg" name="organization" class="form-input" placeholder="e.g., Retail Enterprise / Logistics Hub">
+            </div>
+          </div>
+
+          <div class="form-row form-row-2">
+            <div class="form-group" id="group-email">
+              <label for="contactEmail" class="form-label">Email Address <span class="required">*</span></label>
+              <input type="email" id="contactEmail" name="email" class="form-input" placeholder="e.g., r.sharma@company.com" required>
+              <span class="form-error-msg" id="error-email"></span>
+            </div>
+
+            <div class="form-group" id="group-phone">
+              <label for="contactPhone" class="form-label">Phone / WhatsApp Number</label>
+              <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="e.g., +91 9876543210">
+              <span class="form-error-msg" id="error-phone"></span>
+            </div>
+          </div>
+
+          <div class="form-group" id="group-role">
+            <label for="contactRoleType" class="form-label">Opportunity / Role Type</label>
+            <select id="contactRoleType" name="role_type" class="form-select">
+              <option value="Store Manager">Store Manager (Hypermarket / Supermarket)</option>
+              <option value="Retail Operations Manager">Retail Operations Manager (Cluster / Multi-Unit)</option>
+              <option value="Warehouse & Inventory Operations">Warehouse & Inventory Operations Lead</option>
+              <option value="Commercial & Finance Operations">Commercial & Finance Operations</option>
+              <option value="General Leadership Inquiry">General Leadership Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="group-message">
+            <label for="contactMessage" class="form-label">Opportunity Details / Message <span class="required">*</span></label>
+            <textarea id="contactMessage" name="message" rows="4" class="form-textarea" placeholder="Describe the store footprint, location scope, role specifications, or questions..." required></textarea>
+            <span class="form-error-msg" id="error-message"></span>
+          </div>
+
+          <!-- Live Form Feedback Alert -->
+          <div class="form-alert hidden" id="formAlert" role="alert"></div>
+
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary-solid btn-lg" id="submitInquiryBtn">
+              <span class="btn-spinner hidden" id="btnSpinner" aria-hidden="true"></span>
+              <span class="material-symbols-outlined" id="btnIcon">send</span>
+              <span id="btnText">Submit Leadership Inquiry</span>
+            </button>
+            <button type="reset" class="btn btn-ghost-link btn-md" id="resetInquiryBtn">Clear Form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

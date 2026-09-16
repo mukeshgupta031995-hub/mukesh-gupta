@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Mukesh Gupta | Retail Operations & Store Management Leader{% endblock %}</title>
+  
+  <!-- Primary SEO Meta Tags -->
+  <meta name="title" content="Mukesh Gupta | Retail Operations & Store Management Leader">
+  <meta name="description" content="Official Executive Portfolio of Mukesh Gupta - Assistant Manager at Reliance Retail Limited. 12+ years of leadership in large-format retail store operations, warehouse logistics, inventory control, and commercial finance.">
+  <meta name="keywords" content="Mukesh Gupta, Retail Operations, Store Manager, Reliance Retail, Warehouse Management, Inventory Control, Hypermarket Operations, Supply Chain, Ahmedabad Retail Leader">
+  <meta name="author" content="Mukesh Gupta">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%230051d5%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 font-family=%22Arial,sans-serif%22 font-weight=%22800%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>M</text></svg>">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mukesh Gupta | Retail Operations & Store Management Leader">
+  <meta property="og:description" content="12+ Years Industry Track Record managing high-volume retail stores (17,442 Sq. Ft. / ₹3 Cr monthly turnover). Reliance Retail • Flipkart Instakart • Maharashtra Feeds.">
+  <meta property="og:image" content="{{ url_for('static', filename='images/mukesh-gupta.jpg', _external=True) }}">
+  <meta property="og:url" content="{{ request.url_root }}">
+
+  <!-- Structured Data (Schema.org Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mukesh Gupta",
+    "jobTitle": "Assistant Manager, Retail Operations",
+    "telephone": "+91-7016498175",
+    "email": "mgsmukeshgupta@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Reliance Retail Limited"
+    }
+  }
+  </script>
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Google Material Symbols Outlined -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block head_extra %}{% endblock %}
+</head>
+<body class="site-body">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Fixed Top Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Logo / Identity -->
+      <a href="#about" class="brand-link" aria-label="Mukesh Gupta - Back to top">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <div class="brand-text">
+          <span class="brand-name">Mukesh Gupta</span>
+          <span class="brand-title">Retail Operations Leader</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link active" data-section="about">About</a></li>
+          <li><a href="#highlights" class="nav-link" data-section="highlights">Metrics</a></li>
+          <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+          <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+          <li><a href="#competencies" class="nav-link" data-section="competencies">Skills</a></li>
+          <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="tel:+917016498175" class="btn btn-secondary-outline btn-sm header-tel-btn" aria-label="Call Mukesh Gupta at +91 7016498175">
+          <span class="material-symbols-outlined icon-sm">call</span>
+          <span class="btn-text">+91 7016498175</span>
+        </a>
+        <button type="button" class="btn btn-primary-solid btn-sm header-cv-btn" id="openCvModalBtn" aria-label="Open Resume & CV Preview">
+          <span class="material-symbols-outlined icon-sm">download</span>
+          <span class="btn-text">Download CV</span>
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="hamburger-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-out Drawer Navigation -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <span class="brand-dot"></span>
+        <div>
+          <div class="brand-name">Mukesh Gupta</div>
+          <div class="brand-title">Retail Operations Leader</div>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="closeDrawerBtn" aria-label="Close navigation menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <ul class="drawer-nav-list">
+        <li><a href="#about" class="drawer-nav-link" data-section="about"><span class="material-symbols-outlined">person</span> About Profile</a></li>
+        <li><a href="#highlights" class="drawer-nav-link" data-section="highlights"><span class="material-symbols-outlined">analytics</span> Scale & Metrics</a></li>
+        <li><a href="#experience" class="drawer-nav-link" data-section="experience"><span class="material-symbols-outlined">work_history</span> Professional Experience</a></li>
+        <li><a href="#achievements" class="drawer-nav-link" data-section="achievements"><span class="material-symbols-outlined">military_tech</span> Key Achievements</a></li>
+        <li><a href="#competencies" class="drawer-nav-link" data-section="competencies"><span class="material-symbols-outlined">hub</span> Core Competencies</a></li>
+        <li><a href="#education" class="drawer-nav-link" data-section="education"><span class="material-symbols-outlined">school</span> Education & Details</a></li>
+        <li><a href="#contact" class="drawer-nav-link" data-section="contact"><span class="material-symbols-outlined">mail</span> Leadership Inquiry</a></li>
+      </ul>
+    </nav>
+
+    <div class="drawer-footer">
+      <a href="tel:+917016498175" class="btn btn-primary-solid btn-block mb-2">
+        <span class="material-symbols-outlined">phone_in_talk</span>
+        <span>Call +91 7016498175</span>
+      </a>
+      <a href="mailto:mgsmukeshgupta@gmail.com" class="btn btn-secondary-outline btn-block mb-2">
+        <span class="material-symbols-outlined">mail</span>
+        <span>Email Direct</span>
+      </a>
+      <a href="{{ url_for('resume') }}" target="_blank" rel="noopener" class="btn btn-slate-solid btn-block">
+        <span class="material-symbols-outlined">description</span>
+        <span>View Executive CV</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content" class="main-content" tabindex="-1">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-primary">
+          <div class="footer-brand">
+            <span class="brand-dot"></span>
+            <span class="footer-brand-name">Mukesh Gupta</span>
+          </div>
+          <p class="footer-role">Senior Retail Operations & Large-Format Store Leader</p>
+          <p class="footer-desc">
+            12+ years directing multi-unit retail throughput, shrinkage reduction, high-velocity store management, and customer-first retail profitability across high-scale footprints.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-pulse-dot"></span>
+            <span>Available for Store Manager & Regional Leadership Roles</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Direct Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="material-symbols-outlined">phone_in_talk</span>
+              <a href="tel:+917016498175">+91 7016498175</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">mail</span>
+              <a href="mailto:mgsmukeshgupta@gmail.com">mgsmukeshgupta@gmail.com</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">location_on</span>
+              <span>House No. 45, Village Nebuadih, Dist. Azamgarh, UP – 276142</span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">storefront</span>
+              <span>Current Posting: Ahmedabad, Gujarat</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links-grid">
+            <li><a href="#about">Executive Profile</a></li>
+            <li><a href="#highlights">Key Metrics</a></li>
+            <li><a href="#experience">Experience Timeline</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#competencies">Skills & Systems</a></li>
+            <li><a href="#education">Education & Dossier</a></li>
+            <li><a href="#contact">Contact & Inquiry</a></li>
+            <li><a href="{{ url_for('resume') }}" target="_blank" rel="noopener">Printable Resume</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2025</span> Mukesh Gupta. Executive Retail Operations Portfolio. All rights reserved.
+        </p>
+        <p class="footer-subtext">Enterprise Leadership & Multi-Unit Store Governance</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <!-- Executive CV Modal Preview -->
+  <div class="modal-backdrop" id="cvModal" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="material-symbols-outlined text-secondary">badge</span>
+          <div>
+            <h3 class="modal-title" id="cvModalTitle">Executive Dossier & Resume</h3>
+            <p class="modal-subtitle">Mukesh Gupta · Retail Operations & Store Management</p>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeCvModalBtn" aria-label="Close CV preview modal">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="cv-summary-card">
+          <div class="cv-card-header">
+            <h4>Quick Dossier Highlights</h4>
+            <span class="badge badge-accent">12+ Years Experience</span>
+          </div>
+          <ul class="cv-points">
+            <li><strong>Current Command:</strong> Assistant Manager at Reliance Retail Limited (17,442 Sq. Ft. store, ₹3 Cr/mo sales).</li>
+            <li><strong>Previous:</strong> Instakart Services (Flipkart) - Supply Chain Finance & SOX/ICOFR audits.</li>
+            <li><strong>Previous:</strong> Maharashtra Feeds - Accounts & Commercial Operations.</li>
+            <li><strong>Education:</strong> M.A. & B.A. with first-division school foundations.</li>
+            <li><strong>Enterprise Systems:</strong> SAP Retail/MM, ERP, Advanced Excel (VLOOKUP, Pivot, MIS).</li>
+          </ul>
+        </div>
+        <div class="modal-actions">
+          <a href="{{ url_for('resume') }}" target="_blank" rel="noopener" class="btn btn-primary-solid btn-lg" id="viewPrintCvBtn">
+            <span class="material-symbols-outlined">print</span>
+            <span>Open Print-Ready PDF Resume</span>
+          </a>
+          <a href="mailto:mgsmukeshgupta@gmail.com?subject=Mukesh%20Gupta%20Executive%20CV%20Request&body=Hello%20Mukesh%2C%20we%20reviewed%20your%20Retail%20Operations%20profile%20and%20would%20like%20to%20receive%20your%20complete%20dossier%20for%20a%20leadership%20mandate." class="btn btn-secondary-outline btn-lg">
+            <span class="material-symbols-outlined">mail</span>
+            <span>Request Full Dossier via Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
