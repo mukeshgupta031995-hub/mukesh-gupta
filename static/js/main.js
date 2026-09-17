@@ -411,7 +411,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           if (formAlert) {
             formAlert.className = 'form-alert alert-error';
-            formAlert.textContent = data.message || 'There was an issue processing your inquiry. Please try again or call directly.';
+            const fallbackLink = data.mailto_fallback 
+              ? `<div style="margin-top: 0.5rem; font-size: 13px;">Alternatively, you can <a href="${data.mailto_fallback}" style="color: inherit; text-decoration: underline; font-weight: 700;">click here to send a pre-filled email directly</a> or contact directly.</div>`
+              : '';
+            formAlert.innerHTML = `<strong>Delivery Issue:</strong> ${data.message || 'There was an issue processing your inquiry. Please try again or call directly.'}${fallbackLink}`;
           }
           if (data.errors) {
             Object.keys(data.errors).forEach(field => {
