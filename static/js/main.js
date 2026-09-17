@@ -370,23 +370,26 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Submitting State
+      // Submitting State - prevent duplicate submissions
       if (submitBtn) submitBtn.disabled = true;
       if (btnSpinner) btnSpinner.classList.remove('hidden');
       if (btnIcon) btnIcon.classList.add('hidden');
       if (btnText) btnText.textContent = 'Sending Inquiry...';
 
       const payload = {
+        access_key: 'e975638c-8787-46e6-a6c9-9ebc8e214425',
         name: nameVal,
+        organization: inputOrg ? inputOrg.value.trim() : '',
         email: emailVal,
         phone: phoneVal,
-        organization: inputOrg ? inputOrg.value.trim() : '',
         role_type: inputRole ? inputRole.value : '',
-        message: messageVal
+        message: messageVal,
+        subject: `New Leadership Inquiry from ${nameVal} (${inputRole ? inputRole.value : 'Inquiry'})`,
+        from_name: 'Mukesh Gupta Portfolio'
       };
 
       try {
-        const response = await fetch('/api/contact', {
+        const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -401,35 +404,23 @@ document.addEventListener('DOMContentLoaded', () => {
           if (formAlert) {
             formAlert.className = 'form-alert alert-success';
             formAlert.innerHTML = `
-              <strong>Inquiry Received!</strong> ${data.message}
-              <div style="margin-top: 0.5rem; font-size: 13px;">
-                Alternatively, you can also <a href="${data.mailto_fallback}" style="color: inherit; text-decoration: underline; font-weight: 700;">click here to send a pre-filled email directly</a>.
-              </div>
+              <strong>Inquiry Delivered!</strong> Thank you, ${nameVal}! Your leadership inquiry has been delivered directly to Mukesh Gupta. You will receive a response shortly.
             `;
           }
           contactForm.reset();
         } else {
           if (formAlert) {
             formAlert.className = 'form-alert alert-error';
-            const fallbackLink = data.mailto_fallback 
-              ? `<div style="margin-top: 0.5rem; font-size: 13px;">Alternatively, you can <a href="${data.mailto_fallback}" style="color: inherit; text-decoration: underline; font-weight: 700;">click here to send a pre-filled email directly</a> or contact directly.</div>`
-              : '';
-            formAlert.innerHTML = `<strong>Delivery Issue:</strong> ${data.message || 'There was an issue processing your inquiry. Please try again or call directly.'}${fallbackLink}`;
-          }
-          if (data.errors) {
-            Object.keys(data.errors).forEach(field => {
-              const errLabel = document.getElementById(`error-${field}`);
-              if (errLabel) errLabel.textContent = data.errors[field];
-              document.getElementById(`group-${field}`)?.classList.add('has-error');
-            });
+            const errorMsg = data.message || 'There was an issue processing your inquiry. Please try again or reach out directly.';
+            formAlert.innerHTML = `<strong>Delivery Issue:</strong> ${errorMsg}`;
           }
         }
       } catch (err) {
         if (formAlert) {
           formAlert.className = 'form-alert alert-error';
           formAlert.innerHTML = `
-            Could not connect to server. You can reach Mukesh Gupta directly via 
-            <a href="mailto:mgsmukeshgupta@gmail.com" style="color: inherit; text-decoration: underline; font-weight: 700;">email</a> 
+            Could not connect to service. You can reach Mukesh Gupta directly via 
+            <a href="mailto:mgsmukeshgupta@gmail.com" style="color: inherit; text-decoration: underline; font-weight: 700;">email (mgsmukeshgupta@gmail.com)</a> 
             or <a href="tel:+917016498175" style="color: inherit; text-decoration: underline; font-weight: 700;">phone (+91 7016498175)</a>.
           `;
         }
